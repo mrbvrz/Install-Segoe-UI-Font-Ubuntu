@@ -25,7 +25,8 @@ if [ "$UID" -eq "$ROOT_UID" ]; then
 else
   DEST_DIR="$HOME/.local/share/fonts/Microsoft/TrueType/SegoeUI/"
 fi
-WINE_FONT_DIR="$HOME/.wine/drive_c/windows/Fonts/"
+WINEPREFIX="${WINEPREFIX:-"$HOME/.wine"}"
+WINE_FONT_DIR="$WINEPREFIX/drive_c/windows/Fonts/"
 
 # Check Internet Conection
 function cekkoneksi(){
